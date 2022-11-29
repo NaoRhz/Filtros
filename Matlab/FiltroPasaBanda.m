@@ -1,0 +1,9 @@
+fb=30
+fa=100;
+wb=2*pi*fb;
+wa=2*pi*fa;
+Ts=0.0001;
+num=[10*wb wa*wb];
+den=[10 10*wa+10*wb 10*wa*wb];
+Gs=tf(num, den)
+Gz=c2d(Gs, Ts)
